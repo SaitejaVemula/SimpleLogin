@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <h1>Registration</h1>
     <form>
@@ -15,6 +17,8 @@
         <input type="email" autocomplete="off" id="email">
         <label for="email">Email</label>
         <input type="password" id="password">
+        <label for="dummy">Dummy Field</label>
+        <input type="text" id="dummy">
         <label for="password">Password</label>
         <input type="submit" value="Submit" id="submit">
     </form>
@@ -28,7 +32,7 @@
 
         inputs.forEach(input => {
             input.addEventListener('change', e => {
-                if(e.target.value !== '') {
+                if (e.target.value !== '') {
                     document.querySelector(`label[for="${e.target.id}"]`).classList.add('hid');
                 } else {
                     document.querySelector(`label[for="${e.target.id}"]`).classList.remove('hid');
@@ -37,4 +41,5 @@
         });
     </script>
 </body>
+
 </html>
